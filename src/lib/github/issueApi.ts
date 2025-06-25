@@ -7,6 +7,7 @@ const repo = 'YOUR_REPO_NAME'
 export const listIssues = async () => {
   const octokit = createGitHubClient()
   const { data } = await octokit.issues.listForRepo({ owner, repo })
+
   return data
 }
 
